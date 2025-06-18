@@ -1,0 +1,9 @@
+import telebot
+API_TOKEN="8169270856:AAFX2D-Z2iT1QNRqTKQjRQDHn32Z_t_XUt8"
+bot=telebot.TeleBot(API_TOKEN)
+
+@bot.message_handler(content_types=["text"])
+def some_funtion(message):
+    bot.send_message('1637809388', message.text)
+
+bot.polling()
